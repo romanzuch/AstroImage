@@ -4,7 +4,7 @@
 
 1. [Prerequisites](https://github.com/romanzuch/AstroImage#prerequisites)
 2. [API](https://github.com/romanzuch/AstroImage#api)
-    1. [Query Parameters](https://github.com/romanzuch/AstroImage#queryparameters)
+    1. [Query Parameters](https://github.com/romanzuch/AstroImage#query-parameters)
 3. [Wireframes](https://github.com/romanzuch/AstroImage#wireframes)
 4. [Mockups](https://github.com/romanzuch/AstroImage#mockups)
 
