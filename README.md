@@ -18,4 +18,6 @@ On NASA's API documentation it states:
 
 ![wireframes](https://raw.githubusercontent.com/romanzuch/AstroImage/main/220913_Basic_Wireframes.png)
 
+## Mockups
 
+![mockups](https://github.com/romanzuch/AstroImage/blob/main/MockUps.png)
