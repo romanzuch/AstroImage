@@ -1,5 +1,12 @@
 #  AstroImage
 
+## Contents
+
+1. [Prerequisites](https://github.com/romanzuch/AstroImage#prerequisites)
+2. [API](https://github.com/romanzuch/AstroImage#api)
+3. [Wireframes](https://github.com/romanzuch/AstroImage#wireframes)
+4. [Mockups](https://github.com/romanzuch/AstroImage#mockups)
+
 ## Prerequisites
 
 * Xcode 13.4.1 (13F100)
