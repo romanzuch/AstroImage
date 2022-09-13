@@ -16,4 +16,4 @@ On NASA's API documentation it states:
 
 ## Wireframes
 
-![Basic wireframes]('https://github.com/romanzuch/AstroImage/raw/main/220913_Basic_Wireframes.png')
+![Basic wireframes]('https://raw.githubusercontent.com/romanzuch/AstroImage/main/220913_Basic_Wireframes.png')
