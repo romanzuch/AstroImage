@@ -16,7 +16,7 @@
 
 ## API
 
-I'm using an API provided by the National Aeronautics and Space Administration (NASA) named [APOD (Astronomy Picture of the Day)](https://api.nasa.gov/). This API can be used to retrive the current and historic astronomy pictures. 
+I'm using an API provided by the National Aeronautics and Space Administration (NASA) named [APOD (Astronomy Picture of the Day)](https://api.nasa.gov/). This API can be used to retrive the current and historic astronomy pictures. The API's full documentation can be found in their [Github repository](https://github.com/nasa/apod-api).
 
 On NASA's API documentation it states:
 
