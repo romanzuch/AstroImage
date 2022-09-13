@@ -39,5 +39,8 @@ On NASA's API documentation it states:
 
 ## Mockups
 
+### Basic mockups
 ![mockups](https://github.com/romanzuch/AstroImage/blob/main/MockUps.png)
+
+### Mockups with additional information
 ![mockups with additional screen to show image description](https://github.com/romanzuch/AstroImage/blob/main/MockUps_2.png)
