@@ -44,6 +44,7 @@
 		3087EC5428D0E65C00EF4D48 /* AstroImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3087EC5828D0E65C00EF4D48 /* AstroImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroImageUITests.swift; sourceTree = "<group>"; };
 		3087EC5A28D0E65C00EF4D48 /* AstroImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3087EC6728D0E70700EF4D48 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		3087EC3128D0E65700EF4D48 = {
 			isa = PBXGroup;
 			children = (
+				3087EC6728D0E70700EF4D48 /* README.md */,
 				3087EC3C28D0E65700EF4D48 /* AstroImage */,
 				3087EC4D28D0E65C00EF4D48 /* AstroImageTests */,
 				3087EC5728D0E65C00EF4D48 /* AstroImageUITests */,
@@ -434,7 +436,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +465,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
