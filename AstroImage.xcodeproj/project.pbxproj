@@ -96,8 +96,10 @@
 		3087EC3C28D0E65700EF4D48 /* AstroImage */ = {
 			isa = PBXGroup;
 			children = (
+				30E0E16E28D231BF00613158 /* ViewModel */,
+				30E0E16D28D231BB00613158 /* View */,
+				30E0E16C28D231B700613158 /* Model */,
 				3087EC3D28D0E65700EF4D48 /* AstroImageApp.swift */,
-				3087EC3F28D0E65700EF4D48 /* ContentView.swift */,
 				3087EC4128D0E65B00EF4D48 /* Assets.xcassets */,
 				3087EC4328D0E65B00EF4D48 /* Preview Content */,
 			);
@@ -127,6 +129,28 @@
 				3087EC5A28D0E65C00EF4D48 /* AstroImageUITestsLaunchTests.swift */,
 			);
 			path = AstroImageUITests;
+			sourceTree = "<group>";
+		};
+		30E0E16C28D231B700613158 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30E0E16D28D231BB00613158 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3087EC3F28D0E65700EF4D48 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30E0E16E28D231BF00613158 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
