@@ -17,6 +17,7 @@
 		30E0E17328D231FC00613158 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0E17228D231FC00613158 /* HomeView.swift */; };
 		30E0E17528D2320300613158 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0E17428D2320300613158 /* SearchView.swift */; };
 		30E0E17728D2320900613158 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0E17628D2320900613158 /* MoreView.swift */; };
+		30E0E17D28D23A3000613158 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0E17C28D23A3000613158 /* SearchVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		30E0E17228D231FC00613158 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		30E0E17428D2320300613158 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		30E0E17628D2320900613158 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		30E0E17C28D23A3000613158 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		3087EC3C28D0E65700EF4D48 /* AstroImage */ = {
 			isa = PBXGroup;
 			children = (
+				30E0E17828D2393400613158 /* Extensions */,
 				30E0E16E28D231BF00613158 /* ViewModel */,
 				30E0E16D28D231BB00613158 /* View */,
 				30E0E16C28D231B700613158 /* Model */,
@@ -158,6 +161,7 @@
 		30E0E16E28D231BF00613158 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				30E0E17B28D23A2800613158 /* Search */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -184,6 +188,21 @@
 				30E0E17628D2320900613158 /* MoreView.swift */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		30E0E17828D2393400613158 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30E0E17B28D23A2800613158 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				30E0E17C28D23A3000613158 /* SearchVM.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +339,7 @@
 				30E0E17328D231FC00613158 /* HomeView.swift in Sources */,
 				3087EC4028D0E65700EF4D48 /* ContentView.swift in Sources */,
 				3087EC3E28D0E65700EF4D48 /* AstroImageApp.swift in Sources */,
+				30E0E17D28D23A3000613158 /* SearchVM.swift in Sources */,
 				30E0E17728D2320900613158 /* MoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
