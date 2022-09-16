@@ -17,6 +17,12 @@ struct HomeViewDetails: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Spacer()
+                Image(systemName: "chevron.up")
+                    .foregroundColor(.white)
+                Spacer()
+            }
             Text(response.date)
                 .font(.largeTitle)
                 .fontWeight(.bold)
