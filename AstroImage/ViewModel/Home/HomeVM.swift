@@ -35,4 +35,9 @@ class HomeViewModel: ObservableObject {
     func getSDImageUrl(from string: String) -> URL {
         return URL(string: string)!
     }
+    
+    //MARK: - API Methods relevant to the Home View
+    func getTodaysImage() -> APODResponse {
+        APODResponse()
+    }
 }
