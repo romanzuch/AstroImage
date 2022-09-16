@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var homeVM: HomeViewModel = HomeViewModel()
+    @State private var translation: CGSize = .zero
+    
     var body: some View {
         ZStack {
-            // here comes the fetched image as a background
-            VStack {
-                // here comes the title
-            }
+            AsyncImage(
+                url: homeVM.getSDImageUrl(from: homeVM.testData.sdurl)) { image in
+                    ZStack {
+                        image
+                        // some linear gradient on top of the image
+                        // to increase visibility of the tab bar
+                        LinearGradient(colors: [
+                            .white.opacity(0),
+                            .white.opacity(0),
+                            .white.opacity(0),
+                            .white.opacity(0),
+                            .white
+                        ], startPoint: .top, endPoint: .bottom)
+                    }
+                } placeholder: {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                }
+            details
         }
+    }
+    
+    var details: some View {
+        Text("Here comes the details")
     }
 }
 
