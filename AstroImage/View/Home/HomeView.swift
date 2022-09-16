@@ -9,8 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     
+    //MARK: - ViewModel
     @StateObject var homeVM: HomeViewModel = HomeViewModel()
-    @State private var translation: CGSize = .zero
+    
+    //MARK: - Detail View Properties
+    @State private var detailsExtended: Bool = false
+    
+    //MARK: - Gesture properties
+    @State private var translation: CGFloat = 0
+    @State private var lastTranslation: CGFloat = 0
+    @GestureState private var gestureTranslation: CGSize = .zero
     
     var body: some View {
         ZStack {
@@ -24,19 +32,49 @@ struct HomeView: View {
             
             //MARK: - Bottom sheet for details
             GeometryReader { geo in
+                //TODO: - The max offset of the extended detail view has
+                //TODO: - to be changed to take the container's size
+                //TODO: - into account.
                 let height = geo.frame(in: .global).height
                 let width = geo.frame(in: .global).width
+                let containerHeight = geo.frame(in: .local).height
                 details
                     .padding(.horizontal)
                     .frame(width: width, height: height)
                     .offset(y: height - 180)
+                    .offset(y: translation)
+                    .gesture(
+                        DragGesture()
+                            .onChanged({ value in
+                                translation = value.translation.height + lastTranslation
+                            })
+                            .onEnded({ value in
+                                let maxTranslationValue = -containerHeight + 240
+                                if value.translation.height < 0 {
+                                    withAnimation {
+                                        translation = maxTranslationValue
+                                        detailsExtended = true
+                                    }
+                                } else {
+                                    withAnimation {
+                                        translation = 0
+                                        detailsExtended = false
+                                    }
+                                }
+                                lastTranslation = translation
+                            })
+                    )
             }
         }
     }
     
     var details: some View {
         VStack {
-            HomeViewDetails(for: homeVM.testData)
+            HomeViewDetails(
+                for: homeVM.testData,
+                extended: $detailsExtended,
+                translation: $translation
+            )
             Spacer()
         }
     }
