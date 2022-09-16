@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305140BB28D4C5A100C3D8EA /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140BA28D4C5A100C3D8EA /* HomeVM.swift */; };
+		305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140BC28D4C5E000C3D8EA /* APOD.swift */; };
 		3087EC3E28D0E65700EF4D48 /* AstroImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087EC3D28D0E65700EF4D48 /* AstroImageApp.swift */; };
 		3087EC4028D0E65700EF4D48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087EC3F28D0E65700EF4D48 /* ContentView.swift */; };
 		3087EC4228D0E65B00EF4D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3087EC4128D0E65B00EF4D48 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		305140BA28D4C5A100C3D8EA /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		305140BC28D4C5E000C3D8EA /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		3087EC3A28D0E65700EF4D48 /* AstroImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3087EC3D28D0E65700EF4D48 /* AstroImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroImageApp.swift; sourceTree = "<group>"; };
 		3087EC3F28D0E65700EF4D48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		305140B928D4C59800C3D8EA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				305140BA28D4C5A100C3D8EA /* HomeVM.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		3087EC3128D0E65700EF4D48 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 		30E0E16C28D231B700613158 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				305140BC28D4C5E000C3D8EA /* APOD.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 		30E0E16E28D231BF00613158 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				305140B928D4C59800C3D8EA /* Home */,
 				30E0E17B28D23A2800613158 /* Search */,
 			);
 			path = ViewModel;
@@ -336,7 +350,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E0E17528D2320300613158 /* SearchView.swift in Sources */,
+				305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */,
 				30E0E17328D231FC00613158 /* HomeView.swift in Sources */,
+				305140BB28D4C5A100C3D8EA /* HomeVM.swift in Sources */,
 				3087EC4028D0E65700EF4D48 /* ContentView.swift in Sources */,
 				3087EC3E28D0E65700EF4D48 /* AstroImageApp.swift in Sources */,
 				30E0E17D28D23A3000613158 /* SearchVM.swift in Sources */,
