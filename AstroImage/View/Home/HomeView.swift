@@ -14,30 +14,31 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            AsyncImage(
-                url: homeVM.getSDImageUrl(from: homeVM.testData.sdurl)) { image in
-                    ZStack {
-                        image
-                        // some linear gradient on top of the image
-                        // to increase visibility of the tab bar
-                        LinearGradient(colors: [
-                            .white.opacity(0),
-                            .white.opacity(0),
-                            .white.opacity(0),
-                            .white.opacity(0),
-                            .white
-                        ], startPoint: .top, endPoint: .bottom)
-                    }
-                } placeholder: {
-                    ProgressView()
-                        .progressViewStyle(.circular)
-                }
-            details
+            //MARK: - Background image
+            GeometryReader { geo in
+                let frame = geo.frame(in: .global)
+                APODImage(for: homeVM.testData)
+                    .frame(width: frame.width, height: frame.height)
+            }
+            .ignoresSafeArea()
+            
+            //MARK: - Bottom sheet for details
+            GeometryReader { geo in
+                let height = geo.frame(in: .global).height
+                let width = geo.frame(in: .global).width
+                details
+                    .padding(.horizontal)
+                    .frame(width: width, height: height)
+                    .offset(y: height - 180)
+            }
         }
     }
     
     var details: some View {
-        Text("Here comes the details")
+        VStack {
+            HomeViewDetails(for: homeVM.testData)
+            Spacer()
+        }
     }
 }
 
