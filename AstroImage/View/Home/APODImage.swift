@@ -17,7 +17,7 @@ struct APODImage: View {
     
     var body: some View {
         AsyncImage(
-            url: URL(string: apodResponse.sdurl)!) { image in
+            url: URL(string: apodResponse.sdurl)) { image in
                 ZStack {
                     image
                         .resizable()
