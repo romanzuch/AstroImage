@@ -11,6 +11,7 @@
 		305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140BC28D4C5E000C3D8EA /* APOD.swift */; };
 		305140C328D4F25300C3D8EA /* APODImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140C228D4F25300C3D8EA /* APODImage.swift */; };
 		305140C528D4F63200C3D8EA /* HomeViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140C428D4F63200C3D8EA /* HomeViewDetails.swift */; };
+		307521B928D616150042F805 /* ADODApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307521B828D616150042F805 /* ADODApi.swift */; };
 		3087EC3E28D0E65700EF4D48 /* AstroImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087EC3D28D0E65700EF4D48 /* AstroImageApp.swift */; };
 		3087EC4028D0E65700EF4D48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087EC3F28D0E65700EF4D48 /* ContentView.swift */; };
 		3087EC4228D0E65B00EF4D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3087EC4128D0E65B00EF4D48 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		305140BC28D4C5E000C3D8EA /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		305140C228D4F25300C3D8EA /* APODImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODImage.swift; sourceTree = "<group>"; };
 		305140C428D4F63200C3D8EA /* HomeViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDetails.swift; sourceTree = "<group>"; };
+		307521B828D616150042F805 /* ADODApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADODApi.swift; sourceTree = "<group>"; };
 		3087EC3A28D0E65700EF4D48 /* AstroImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3087EC3D28D0E65700EF4D48 /* AstroImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroImageApp.swift; sourceTree = "<group>"; };
 		3087EC3F28D0E65700EF4D48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		3087EC5828D0E65C00EF4D48 /* AstroImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroImageUITests.swift; sourceTree = "<group>"; };
 		3087EC5A28D0E65C00EF4D48 /* AstroImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3087EC6728D0E70700EF4D48 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		30C9EEF528D6534400333001 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		30C9EEF628D6537E00333001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30E0E17228D231FC00613158 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		30E0E17428D2320300613158 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		30E0E17628D2320900613158 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
@@ -96,9 +100,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		307521B728D616040042F805 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				307521B828D616150042F805 /* ADODApi.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3087EC3128D0E65700EF4D48 = {
 			isa = PBXGroup;
 			children = (
+				30C9EEF528D6534400333001 /* Config.xcconfig */,
 				3087EC6728D0E70700EF4D48 /* README.md */,
 				3087EC3C28D0E65700EF4D48 /* AstroImage */,
 				3087EC4D28D0E65C00EF4D48 /* AstroImageTests */,
@@ -120,6 +133,8 @@
 		3087EC3C28D0E65700EF4D48 /* AstroImage */ = {
 			isa = PBXGroup;
 			children = (
+				30C9EEF628D6537E00333001 /* Info.plist */,
+				307521B728D616040042F805 /* Services */,
 				30E0E17828D2393400613158 /* Extensions */,
 				30E0E16E28D231BF00613158 /* ViewModel */,
 				30E0E16D28D231BB00613158 /* View */,
@@ -365,6 +380,7 @@
 				3087EC3E28D0E65700EF4D48 /* AstroImageApp.swift in Sources */,
 				30E0E17D28D23A3000613158 /* SearchVM.swift in Sources */,
 				30E0E17728D2320900613158 /* MoreView.swift in Sources */,
+				307521B928D616150042F805 /* ADODApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +419,7 @@
 /* Begin XCBuildConfiguration section */
 		3087EC5C28D0E65C00EF4D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30C9EEF528D6534400333001 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -463,6 +480,7 @@
 		};
 		3087EC5D28D0E65C00EF4D48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30C9EEF528D6534400333001 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -526,6 +544,7 @@
 				DEVELOPMENT_TEAM = HS8PVR3BLT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstroImage/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -555,6 +574,7 @@
 				DEVELOPMENT_TEAM = HS8PVR3BLT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstroImage/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
