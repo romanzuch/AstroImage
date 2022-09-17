@@ -8,6 +8,9 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
+    
+    @Published var data: APODResponse = APODResponse()
+    
     let testString = """
     {
         "copyright": "Martin Pugh",
@@ -37,7 +40,15 @@ class HomeViewModel: ObservableObject {
     }
     
     //MARK: - API Methods relevant to the Home View
-    func getTodaysImage() -> APODResponse {
-        APODResponse()
+    let apodApi: APODApi = APODApi.singleton
+    func getTodaysImage() async {
+        await apodApi.getTodaysImage() { apiResponse in
+            if let response = apiResponse {
+                debugPrint(response)
+                self.data = response
+            } else {
+                debugPrint("There was an error retrieving the data.")
+            }
+        }
     }
 }
