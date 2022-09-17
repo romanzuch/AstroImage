@@ -25,7 +25,7 @@ struct HomeView: View {
             //MARK: - Background image
             GeometryReader { geo in
                 let frame = geo.frame(in: .global)
-                APODImage(for: homeVM.testData)
+                APODImage(for: homeVM.data)
                     .frame(width: frame.width, height: frame.height)
             }
             .ignoresSafeArea()
@@ -66,12 +66,15 @@ struct HomeView: View {
                     )
             }
         }
+        .task {
+            await homeVM.getTodaysImage()
+        }
     }
     
     var details: some View {
         VStack {
             HomeViewDetails(
-                for: homeVM.testData,
+                for: homeVM.data,
                 extended: $detailsExtended,
                 translation: $translation
             )
