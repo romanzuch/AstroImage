@@ -23,6 +23,7 @@
 		30E0E17528D2320300613158 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0E17428D2320300613158 /* SearchView.swift */; };
 		30E0E17728D2320900613158 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0E17628D2320900613158 /* MoreView.swift */; };
 		30E0E17D28D23A3000613158 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E0E17C28D23A3000613158 /* SearchVM.swift */; };
+		30E1F75528D6FF7000F2A06F /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75428D6FF7000F2A06F /* SearchResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		30E0E17428D2320300613158 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		30E0E17628D2320900613158 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		30E0E17C28D23A3000613158 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
+		30E1F75428D6FF7000F2A06F /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				30E0E17428D2320300613158 /* SearchView.swift */,
+				30E1F75428D6FF7000F2A06F /* SearchResultView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				305140C528D4F63200C3D8EA /* HomeViewDetails.swift in Sources */,
+				30E1F75528D6FF7000F2A06F /* SearchResultView.swift in Sources */,
 				305140C328D4F25300C3D8EA /* APODImage.swift in Sources */,
 				30E0E17528D2320300613158 /* SearchView.swift in Sources */,
 				305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */,
