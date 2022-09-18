@@ -46,22 +46,23 @@ struct SearchView: View {
                     } label: {
                         Text("Search")
                     }
+                    .buttonStyle(.bordered)
                 }
                 .padding(.horizontal, 16)
                 .padding(.bottom, 16)
                 Spacer()
                 // here comes the results list
                 if let data = searchVM.data {
-                    Form {
+                    List {
                         ForEach(data, id: \.id) { result in
                             SearchResultView(for: result)
                         }
                     }
-                    
+                    .padding(.bottom, 84)
                 } else {
                     Text("Click search to display results")
+                    Spacer()
                 }
-                Spacer()
             }
             .ignoresSafeArea(.container, edges: .bottom)
             .navigationTitle("Search")
