@@ -21,6 +21,9 @@ struct SearchDetailView: View {
     //MARK: - Detail View Properties
     @State private var detailsExtended: Bool = false
     
+    //MARK: - Confirmation Dialog
+    @State private var showDialog: Bool = false
+    
     init(for result: APODResponse) {
         self.result = result
     }
@@ -79,9 +82,10 @@ struct SearchDetailView: View {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button {
                     Task {
-                        guard let image = await searchDetailVM.getImageDownload(for: result, inProgress: $downloadInProgress) else { return }
+                        guard let downloadedImage = await searchDetailVM.getImageDownload(for: result, inProgress: $downloadInProgress) else { return }
+                        searchDetailVM.image = downloadedImage
                         let imageSaver = ImageSaver()
-                        imageSaver.writeToPhotoAlbum(image: image)
+                        imageSaver.writeToPhotoAlbum(image: downloadedImage)
                     }
                 } label: {
                     Group {
@@ -96,12 +100,21 @@ struct SearchDetailView: View {
                 }
                 
                 Button {
-                    debugPrint("Share")
+                    showDialog = true
                 } label: {
                     Image(systemName: "square.and.arrow.up")
                 }
+                .confirmationDialog("What to share", isPresented: $showDialog) {
+                    Button("Title & URL") {
+                        ActivitySheet.main.actionSheet(for: result)
+                    }
+                    Button("Image") {
+                        ActivitySheet.main.actionSheet(for: searchDetailVM.image)
+                    }
+                }
             }
         }
+        
     }
     
     var details: some View {
