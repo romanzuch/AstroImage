@@ -5,15 +5,16 @@
 //  Created by Roman on 18.09.22.
 //
 
-import Foundation
+import SwiftUI
 import UIKit
 
 class SearchDetailViewModel: ObservableObject {
     
     let apodApi: APODApi = APODApi.singleton
     
-    func getImageDownload(for response: APODResponse) async -> UIImage? {
+    func getImageDownload(for response: APODResponse, inProgress: Binding<Bool>) async -> UIImage? {
         var downloadImage: UIImage?
+        inProgress.wrappedValue.toggle()
         if response.hdurl != "" {
             await apodApi.getImageForDownload(for: response.hdurl!) { image in
                 downloadImage = image
@@ -23,6 +24,7 @@ class SearchDetailViewModel: ObservableObject {
                 downloadImage = image
             }
         }
+        inProgress.wrappedValue.toggle()
         return downloadImage
     }
     
