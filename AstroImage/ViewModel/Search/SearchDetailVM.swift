@@ -12,6 +12,9 @@ class SearchDetailViewModel: ObservableObject {
     
     let apodApi: APODApi = APODApi.singleton
     
+    //MARK: - Image
+    @Published var image: UIImage = UIImage()
+    
     func getImageDownload(for response: APODResponse, inProgress: Binding<Bool>) async -> UIImage? {
         var downloadImage: UIImage?
         inProgress.wrappedValue.toggle()
