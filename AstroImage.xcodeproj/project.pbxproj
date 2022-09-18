@@ -28,6 +28,7 @@
 		30E1F75A28D715FD00F2A06F /* ImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75928D715FD00F2A06F /* ImageType.swift */; };
 		30E1F75C28D7215A00F2A06F /* SearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75B28D7215A00F2A06F /* SearchDetailView.swift */; };
 		30E1F75E28D72B1B00F2A06F /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75D28D72B1B00F2A06F /* ImageSaver.swift */; };
+		30E1F76028D72E5500F2A06F /* SearchDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75F28D72E5500F2A06F /* SearchDetailVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		30E1F75928D715FD00F2A06F /* ImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageType.swift; sourceTree = "<group>"; };
 		30E1F75B28D7215A00F2A06F /* SearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailView.swift; sourceTree = "<group>"; };
 		30E1F75D28D72B1B00F2A06F /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		30E1F75F28D72E5500F2A06F /* SearchDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			children = (
 				30E0E17C28D23A3000613158 /* SearchVM.swift */,
 				30E1F75728D7139300F2A06F /* SearchResultVM.swift */,
+				30E1F75F28D72E5500F2A06F /* SearchDetailVM.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				305140C328D4F25300C3D8EA /* APODImage.swift in Sources */,
 				30E0E17528D2320300613158 /* SearchView.swift in Sources */,
 				305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */,
+				30E1F76028D72E5500F2A06F /* SearchDetailVM.swift in Sources */,
 				30E0E17328D231FC00613158 /* HomeView.swift in Sources */,
 				305140BB28D4C5A100C3D8EA /* HomeVM.swift in Sources */,
 				3087EC4028D0E65700EF4D48 /* ContentView.swift in Sources */,
