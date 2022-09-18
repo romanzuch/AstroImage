@@ -29,6 +29,7 @@
 		30E1F75C28D7215A00F2A06F /* SearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75B28D7215A00F2A06F /* SearchDetailView.swift */; };
 		30E1F75E28D72B1B00F2A06F /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75D28D72B1B00F2A06F /* ImageSaver.swift */; };
 		30E1F76028D72E5500F2A06F /* SearchDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F75F28D72E5500F2A06F /* SearchDetailVM.swift */; };
+		30E1F76228D7341200F2A06F /* ImageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E1F76128D7341200F2A06F /* ImageDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		30E1F75B28D7215A00F2A06F /* SearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailView.swift; sourceTree = "<group>"; };
 		30E1F75D28D72B1B00F2A06F /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		30E1F75F28D72E5500F2A06F /* SearchDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailVM.swift; sourceTree = "<group>"; };
+		30E1F76128D7341200F2A06F /* ImageDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				305140C228D4F25300C3D8EA /* APODImage.swift */,
+				30E1F76128D7341200F2A06F /* ImageDetails.swift */,
 			);
 			path = Disposables;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				30E1F75528D6FF7000F2A06F /* SearchResultView.swift in Sources */,
 				305140C328D4F25300C3D8EA /* APODImage.swift in Sources */,
 				30E0E17528D2320300613158 /* SearchView.swift in Sources */,
+				30E1F76228D7341200F2A06F /* ImageDetails.swift in Sources */,
 				305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */,
 				30E1F76028D72E5500F2A06F /* SearchDetailVM.swift in Sources */,
 				30E0E17328D231FC00613158 /* HomeView.swift in Sources */,
@@ -577,6 +581,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroImage/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save your favorite astronomy image.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -608,6 +613,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroImage/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save your favorite astronomy image.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
