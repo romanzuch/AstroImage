@@ -29,14 +29,29 @@ struct APODApi {
         }
     }
     
-    func getImageForDate(for date: Date) async {
-        dateFormatter.dateFormat = "YYYY-MM-DD"
-        let dateString: String = dateFormatter.string(from: date)
-        debugPrint("Today's date: \(dateString)")
-    }
-    
-    func getImagesFromDateRange(from startdate: Date, to endDate: Date) async {
-        
+    func getImagesFromDateRange(from startDate: Date, to endDate: Date, handler: @escaping (([APODResponse]?) -> Void)) async {
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let startDateString: String = dateFormatter.string(from: startDate)
+        let endDateString: String = dateFormatter.string(from: endDate)
+        var urlString: String = ""
+        if startDate == endDate {
+            urlString = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&date=\(startDateString)"
+        } else {
+            urlString = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&start_date=\(startDateString)&end_date=\(endDateString)"
+        }
+        guard let url = URL(string: urlString) else {
+            debugPrint("There is no URL found.")
+            return
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            if let decodedResponse = try? JSONDecoder().decode([APODResponse].self, from: data) {
+                debugPrint(decodedResponse)
+                handler(decodedResponse)
+            }
+        } catch {
+            debugPrint("Invalid data")
+        }
     }
     
     func getRandomImages(amount: Int) async {
