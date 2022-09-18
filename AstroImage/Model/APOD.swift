@@ -8,6 +8,7 @@
 import Foundation
 
 struct APODResponse: Codable {
+    let id: UUID = UUID()
     var author: String? = ""
     var date: String = ""
     var explanation: String = ""
