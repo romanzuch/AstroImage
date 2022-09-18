@@ -11,6 +11,8 @@
 		305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140BC28D4C5E000C3D8EA /* APOD.swift */; };
 		305140C328D4F25300C3D8EA /* APODImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140C228D4F25300C3D8EA /* APODImage.swift */; };
 		305140C528D4F63200C3D8EA /* HomeViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305140C428D4F63200C3D8EA /* HomeViewDetails.swift */; };
+		3065229D28D78D04001DA7DD /* SharingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065229C28D78D04001DA7DD /* SharingType.swift */; };
+		3065229F28D78F78001DA7DD /* ActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065229E28D78F78001DA7DD /* ActivitySheet.swift */; };
 		307521B928D616150042F805 /* ADODApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307521B828D616150042F805 /* ADODApi.swift */; };
 		3087EC3E28D0E65700EF4D48 /* AstroImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087EC3D28D0E65700EF4D48 /* AstroImageApp.swift */; };
 		3087EC4028D0E65700EF4D48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087EC3F28D0E65700EF4D48 /* ContentView.swift */; };
@@ -54,6 +56,8 @@
 		305140BC28D4C5E000C3D8EA /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		305140C228D4F25300C3D8EA /* APODImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODImage.swift; sourceTree = "<group>"; };
 		305140C428D4F63200C3D8EA /* HomeViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDetails.swift; sourceTree = "<group>"; };
+		3065229C28D78D04001DA7DD /* SharingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingType.swift; sourceTree = "<group>"; };
+		3065229E28D78F78001DA7DD /* ActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySheet.swift; sourceTree = "<group>"; };
 		307521B828D616150042F805 /* ADODApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADODApi.swift; sourceTree = "<group>"; };
 		3087EC3A28D0E65700EF4D48 /* AstroImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3087EC3D28D0E65700EF4D48 /* AstroImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroImageApp.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 			children = (
 				305140BC28D4C5E000C3D8EA /* APOD.swift */,
 				30E1F75928D715FD00F2A06F /* ImageType.swift */,
+				3065229C28D78D04001DA7DD /* SharingType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			children = (
 				305140C228D4F25300C3D8EA /* APODImage.swift */,
 				30E1F76128D7341200F2A06F /* ImageDetails.swift */,
+				3065229E28D78F78001DA7DD /* ActivitySheet.swift */,
 			);
 			path = Disposables;
 			sourceTree = "<group>";
@@ -405,11 +411,13 @@
 				30E0E17528D2320300613158 /* SearchView.swift in Sources */,
 				30E1F76228D7341200F2A06F /* ImageDetails.swift in Sources */,
 				305140BD28D4C5E000C3D8EA /* APOD.swift in Sources */,
+				3065229D28D78D04001DA7DD /* SharingType.swift in Sources */,
 				30E1F76028D72E5500F2A06F /* SearchDetailVM.swift in Sources */,
 				30E0E17328D231FC00613158 /* HomeView.swift in Sources */,
 				305140BB28D4C5A100C3D8EA /* HomeVM.swift in Sources */,
 				3087EC4028D0E65700EF4D48 /* ContentView.swift in Sources */,
 				30E1F75828D7139300F2A06F /* SearchResultVM.swift in Sources */,
+				3065229F28D78F78001DA7DD /* ActivitySheet.swift in Sources */,
 				30E1F75C28D7215A00F2A06F /* SearchDetailView.swift in Sources */,
 				3087EC3E28D0E65700EF4D48 /* AstroImageApp.swift in Sources */,
 				30E0E17D28D23A3000613158 /* SearchVM.swift in Sources */,
