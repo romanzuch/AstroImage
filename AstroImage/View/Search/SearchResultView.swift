@@ -35,7 +35,7 @@ struct SearchResultView: View {
             SearchDetailView(for: result)
         } label: {
             HStack {
-                APODImage(for: result, type: .full)
+                APODImage(for: result, type: .details)
                     .frame(width: 80, height: 80)
                     .cornerRadius(8)
                 VStack(alignment: .leading) {
