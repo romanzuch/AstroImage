@@ -38,7 +38,15 @@ struct HomeView: View {
                 let height = geo.frame(in: .global).height
                 let width = geo.frame(in: .global).width
                 let containerHeight = geo.frame(in: .local).height
+                let maxTranslationValue = -containerHeight + 240
                 details
+                    .background {
+                        Rectangle()
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 3)
+                            .offset(y: height + 163) // tab bar height 83px
+                            .foregroundColor(.black)
+                            .opacity(translation == 0 ? 0 : 0.3)
+                    }
                     .padding(.horizontal)
                     .frame(width: width, height: height)
                     .offset(y: height - 180)
@@ -49,7 +57,6 @@ struct HomeView: View {
                                 translation = value.translation.height + lastTranslation
                             })
                             .onEnded({ value in
-                                let maxTranslationValue = -containerHeight + 240
                                 if value.translation.height < 0 {
                                     withAnimation {
                                         translation = maxTranslationValue
