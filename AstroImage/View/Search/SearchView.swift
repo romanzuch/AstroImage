@@ -41,6 +41,7 @@ struct SearchView: View {
                     Spacer()
                     Button {
                         Task {
+                            debugPrint(searchVM.startDate)
                             await searchVM.getImagesFromDateRange()
                         }
                     } label: {
@@ -67,11 +68,5 @@ struct SearchView: View {
             .ignoresSafeArea(.container, edges: .bottom)
             .navigationTitle("Search")
         }
-    }
-}
-
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
     }
 }
