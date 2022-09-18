@@ -16,7 +16,7 @@ struct SearchView: View {
         NavigationView {
             VStack {
                 // here comes the date picker
-                HStack {
+                HStack(alignment: .bottom) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("From")
                         DatePicker("", selection: $searchVM.startDate, displayedComponents: .date)
@@ -38,9 +38,32 @@ struct SearchView: View {
                                 }
                             }
                     }
-                }.padding(.horizontal, 16)
+                    Spacer()
+                    Button {
+                        Task {
+                            await searchVM.getImagesFromDateRange()
+                        }
+                    } label: {
+                        Text("Search")
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.bottom, 16)
+                Spacer()
                 // here comes the results list
+                if let data = searchVM.data {
+                    Form {
+                        ForEach(data, id: \.id) { result in
+                            SearchResultView(for: result)
+                        }
+                    }
+                    
+                } else {
+                    Text("Click search to display results")
+                }
+                Spacer()
             }
+            .ignoresSafeArea(.container, edges: .bottom)
             .navigationTitle("Search")
         }
     }
