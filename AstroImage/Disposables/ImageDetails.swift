@@ -27,28 +27,24 @@ struct ImageDetails: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Spacer()
-                Image(systemName: viewExtended || translation < -300 ? "chevron.down" : "chevron.up").foregroundColor(.white)
+                Image(systemName: viewExtended || translation < -300 ? "chevron.down" : "chevron.up")
                 Spacer()
             }
             Text(date)
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.white)
             Text(response.title)
                 .font(.title)
-                .foregroundColor(.white)
             Group {
                 if viewExtended {
                     ScrollView(.vertical, showsIndicators: false) {
                         Text(response.explanation)
-                            .foregroundColor(.white)
                             .padding(.bottom, 80)
                         //TODO: - Write a method to calculate the opacity starting after the view has been slided just a bit, rather than from the beginning
                             .opacity(viewExtended ? 1 : -translation/200)
                     }
                 } else {
                     Text(response.explanation)
-                        .foregroundColor(.white)
                     //TODO: - Write a method to calculate the opacity starting after the view has been slided just a bit, rather than from the beginning
                         .opacity(viewExtended ? 1 : -translation/200)
                 }
