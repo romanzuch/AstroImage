@@ -23,7 +23,7 @@ struct APODImage: View {
                 ZStack {
                     image
                         .resizable()
-                        .aspectRatio(contentMode: type == .full ? .fill : .fit)
+                        .aspectRatio(contentMode: .fill)
                     if type == .full {
                         // some linear gradient on top of the image
                         // to increase visibility of the tab bar
