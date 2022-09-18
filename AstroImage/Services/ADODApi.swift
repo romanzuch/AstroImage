@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct APODApi {
     
@@ -56,6 +57,19 @@ struct APODApi {
     
     func getRandomImages(amount: Int) async {
         
+    }
+    
+    func getImageForDownload(for url: String, handler: @escaping ((UIImage) -> Void)) async {
+        guard let url = URL(string: url) else {
+            debugPrint("No URL found")
+            return
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            handler(UIImage(data: data) ?? UIImage())
+        } catch {
+            debugPrint("Error occured catching the image")
+        }
     }
     
 }
