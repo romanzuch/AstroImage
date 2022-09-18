@@ -80,7 +80,7 @@ struct HomeView: View {
     
     var details: some View {
         VStack {
-            HomeViewDetails(
+            ImageDetails(
                 for: homeVM.data,
                 extended: $detailsExtended,
                 translation: $translation
