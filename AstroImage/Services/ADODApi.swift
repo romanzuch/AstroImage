@@ -34,12 +34,7 @@ struct APODApi {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let startDateString: String = dateFormatter.string(from: startDate)
         let endDateString: String = dateFormatter.string(from: endDate)
-        var urlString: String = ""
-        if startDate == endDate {
-            urlString = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&date=\(startDateString)"
-        } else {
-            urlString = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&start_date=\(startDateString)&end_date=\(endDateString)"
-        }
+        let urlString: String = "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)&start_date=\(startDateString)&end_date=\(endDateString)"
         guard let url = URL(string: urlString) else {
             debugPrint("There is no URL found.")
             return
