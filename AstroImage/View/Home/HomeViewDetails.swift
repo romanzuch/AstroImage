@@ -10,11 +10,16 @@ import SwiftUI
 struct HomeViewDetails: View {
     
     let response: APODResponse
+    var date: String
     @Binding var viewExtended: Bool
     @Binding var translation: CGFloat
+    let formatter: DateFormatter = DateFormatter()
     
     init(for response: APODResponse, extended: Binding<Bool>, translation: Binding<CGFloat>) {
         self.response = response
+        let rawDate = Date()
+        self.formatter.dateFormat = "MM/dd/yyyy"
+        self.date = formatter.string(from: rawDate)
         self._viewExtended = extended
         self._translation = translation
     }
@@ -26,7 +31,7 @@ struct HomeViewDetails: View {
                 Image(systemName: viewExtended || translation < -300 ? "chevron.down" : "chevron.up").foregroundColor(.white)
                 Spacer()
             }
-            Text(response.date)
+            Text(date)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
