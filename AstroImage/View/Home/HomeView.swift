@@ -25,7 +25,7 @@ struct HomeView: View {
             //MARK: - Background image
             GeometryReader { geo in
                 let frame = geo.frame(in: .global)
-                APODImage(for: homeVM.data)
+                APODImage(for: homeVM.data, type: .full)
                     .frame(width: frame.width, height: frame.height)
             }
             .ignoresSafeArea()
